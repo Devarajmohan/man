@@ -58,37 +58,42 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.slide button {
+.button-container {
+    display: flex;
+    justify-content: center; /* Aligns buttons horizontally in the center */
+    gap: 20px; /* Adds spacing between the buttons */
     position: absolute;
     top: 83%;
     left: 50%;
     transform: translateX(-50%);
+  }
+  
+  .button-container button {
     padding: 20px 35px;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-border-radius: 5px;
-cursor: pointer;
-font-size: 1.2rem;
-transition: box-shadow 0.3s ease-in-out;
-}
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .button-container button:focus {
+    outline: none;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+  }
+  
+  .button-container button:active {
+    box-shadow: 0 0 15px 3px rgba(255, 255, 255, 1);
+  }
 
-
-
-.slide button:focus {
-outline: none;
-box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
-}
-
-.slide button:active {
-box-shadow: 0 0 15px 3px rgba(255, 255, 255, 1);
-}
-
-
-.slide button:hover {
-    background-color: #333;
-}
-
+  .button-container button:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+  }
+  
 .main{
     height:100vh;
     width:100%;  
@@ -117,7 +122,7 @@ box-shadow: 0 0 15px 3px rgba(255, 255, 255, 1);
     padding-top: 10px;
     gap: 20px;
     
-    color: #FFD700;
+    color: #E79A3F;
   }
   
   
@@ -236,17 +241,17 @@ box-shadow: 0 0 15px 3px rgba(255, 255, 255, 1);
 
   /* servive view */
   .service {
-    background-color: rgb(0, 0, 0); /* Light background for the section */
+    background-color: white; /* Light background for the section */
     padding: 50px 20px; /* Space around the content */
     text-align: center; /* Center the heading */
-    color: #f8f8f8; /* Dark text color for contrast */
+    color: black; /* Dark text color for contrast */
     
 }
 
 .service h1 {
     font-size: 3rem; /* Set font size for the heading */
     font-family: 'Roboto', sans-serif; /* Modern font */
-    color: #FFD700; /* Dark color for readability */
+    color: #E79A3F; /* Dark color for readability */
     font-weight: 700; /* Bold font weight */
     margin-bottom: 20px; /* Space below the heading */
     text-transform: uppercase; /* Make the heading uppercase */
@@ -263,10 +268,10 @@ box-shadow: 0 0 15px 3px rgba(255, 255, 255, 1);
 }
 
 .card {
-    background-color: #242323; /* White background for each card */
+    background-color: white; /* White background for each card */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(255, 254, 254, 0.5); /* Subtle shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Subtle shadow */
     text-align: center;
     transition: transform 0.3s ease-in-out;
 }
@@ -281,13 +286,13 @@ box-shadow: 0 0 15px 3px rgba(255, 255, 255, 1);
 
 .card h1 {
     font-size: 1.5rem;
-    color: #FFD700;
+    color: black;
     margin-bottom: 10px;
 }
 
 .card p {
     font-size: 1rem;
-    color: #eae9e9;
+    color: #424141;
 }
 
 /* Hover effect for cards */
@@ -298,14 +303,14 @@ box-shadow: 0 0 15px 3px rgba(255, 255, 255, 1);
 /* conact */
 .contact {
     padding: 20px;
-    background-color: #000000;
+    background-color: white;
     text-align: center;
 }
 
 .contact h1 {
     font-size: 3rem; /* Set font size for the heading */
     font-family: 'Roboto', sans-serif; /* Modern font */
-    color: #FFD700; /* Dark color for readability */
+    color: #E79A3F; /* Dark color for readability */
     font-weight: 700; /* Bold font weight */
     margin-bottom: 20px; /* Space below the heading */
     text-transform: uppercase; /* Make the heading uppercase */
@@ -327,7 +332,8 @@ box-shadow: 0 0 15px 3px rgba(255, 255, 255, 1);
     font-weight: 500px;
     padding-top: 40px;
     
-    color: #fbfbfb;
+    color: black;
+    text-transform: uppercase;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     
 }
@@ -345,7 +351,7 @@ box-shadow: 0 0 15px 3px rgba(255, 255, 255, 1);
 
 .contact-form label {
     font-size: 1rem;
-    color: #333;
+    color: #0e0d0d;
     text-align: left;
 }
 
@@ -355,12 +361,15 @@ box-shadow: 0 0 15px 3px rgba(255, 255, 255, 1);
     width: 100%;
     padding: 10px;
     font-size: 1rem;
-    border: 1px solid #ccc;
+    border: 1px solid #0f0e0e;
     border-radius: 4px;
 }
-
+.contact-form  h2{
+    color: black;
+    text-transform: uppercase;
+}
 .contact-form button {
-    background-color: #1D3557;
+    background-color: #E79A3F;
     color: white;
     padding: 10px;
     font-size: 1.1rem;
@@ -370,7 +379,7 @@ box-shadow: 0 0 15px 3px rgba(255, 255, 255, 1);
 }
 
 .contact-form button:hover {
-    background-color: #A8DADC;
+    background-color: black;
 }
 
 
@@ -414,7 +423,7 @@ ul{
 	position: absolute;
 	left:0;
 	bottom: -10px;
-	background-color: #FFD700;
+	background-color: #E79A3F;
 	height: 2px;
 	box-sizing: border-box;
 	width: 50px;
@@ -565,7 +574,7 @@ ul{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .slider-container {
-    height: 300px;
+    height: 255px;
 }
 
 .slide img {
@@ -577,12 +586,41 @@ ul{
     top: 3%;
 }
 
-.slide button {
-    font-size: 16px;
-    padding: 9px 10px;
-    top: 60%;
+.button-container {
+    display: flex;
+    justify-content: center; /* Aligns buttons horizontally in the center */
+    gap: 20px; /* Adds spacing between the buttons */
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+.button-container button {
+    padding: 8px 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 11px;
+    transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
+  
+  .button-container button:focus {
+    outline: none;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+  }
+  
+  .button-container button:active {
+    box-shadow: 0 0 15px 3px rgba(255, 255, 255, 1);
+  }
 
+  .button-container button:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8);
+  }
 .main h1 {
     font-size: 20px;
 }
@@ -594,8 +632,8 @@ ul{
 
 /* Service Section */
 .service {
-    background-color: rgb(0, 0, 0); /* Light background for the section */
-        padding: 1px 10px; /* Space around the content */
+    background-color: white; /* Light background for the section */
+        padding: 19px 10px; /* Space around the content */
         text-align: center; /* Center the heading */
         color: #f8f8f8; /* Dark text color for contrast */
 }
@@ -603,6 +641,8 @@ ul{
 .service h1 {
     font-size: 25px;
     padding-top: -20%;
+    color: #E79A3F;
+
 }
 
 .service-cards {
@@ -612,23 +652,33 @@ ul{
 
 .card {
     padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* Subtle shadow */
+   
 }
 
 .card h1 {
     font-size: 1.2rem;
+    color: black;
 }
 
 .card p {
     font-size: 0.9rem;
+    color: #424141;
 }
 
 /* Contact Section */
 .contact {
     padding: 25px;
+    color: white;
+    text-decoration: none;
+   
+    margin: 0; /* Ensures no extra margin around the contact section */
+    border: none;
 }
 
 .contact h1 {
     font-size: 25px;
+    
 
 }
 
@@ -651,6 +701,10 @@ ul{
 .contact-form {
     width: 100%;
     padding: 20px;
+}
+.contact-form  h2{
+    color: black;
+    text-transform: uppercase;
 }
 
 .contact-form input,
